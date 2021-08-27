@@ -6,8 +6,8 @@ After=network.target
 [Service]
 User=marty331
 Group=videoplayer
-WorkingDirectory=/dev/constream
-ExecStart=/usr/bin/python3 dev/constream/ffmpeg_runner.py
+WorkingDirectory=/apps/constream
+ExecStart=/usr/bin/python3 apps/constream/ffmpeg_runner.py
 
 [Install]
 WantedBy=multi-user.target
