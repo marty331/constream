@@ -10,8 +10,8 @@ from icecream import ic
 from decouple import config
 
 
-ffmpeg = "/usr/local/bin/ffmpeg"
-ffprobe = "/usr/local/bin/ffprobe"
+ffmpeg = config("FFMPEG_LOC")
+ffprobe = config("FFPROBE_LOC")
 
 
 class FfmpegRunner:
