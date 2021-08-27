@@ -76,10 +76,11 @@ class FfmpegRunner:
                         sleep(2)
 
     def aws_download_file(self, client, movie):
+        current_dir = os.getcwd()
         movie_file = client.download_file(
             'martystestspace',
             movie,
-            f'/Users/marty331/PycharmProjects/ffmpeg_test/{movie}')
+            f'{current_dir}/{movie}')
         return movie_file
             
     def grab_user_input(self, input_file):
