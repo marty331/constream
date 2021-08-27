@@ -85,7 +85,7 @@ class FfmpegRunner:
     def grab_user_input(self, input_file):
         user_input_dict = dict()
         user_input_dict["input_file"] = input_file
-        user_input_dict["output_file"] = "/Users/marty331/Movies/videos/second/index.m3u8"
+        user_input_dict["output_file"] = config('OUTPUT_FILE_LOCATION')
         user_input_dict["video_codec"] = "libx264"
         user_input_dict["audio_codec"] = "aac"
         user_input_dict["audio_bitrate"] = "196k"
