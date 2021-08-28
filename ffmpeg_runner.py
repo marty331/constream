@@ -195,9 +195,9 @@ class FfmpegRunner:
                 if os.path.isfile(file_path) and file_type[0] == 'ts':
                     os.unlink(file_path)
                     print(f"delete {file_path}")
-                # if os.path.isfile(file_path) and file_type[0] == 'm3u8':
-                #     os.unlink(file_path)
-                #     print(f"delete {file_path}")
+                if os.path.isfile(file_path) and file_type[0] == 'm3u8':
+                    os.unlink(file_path)
+                    print(f"delete {file_path}")
             except Exception as e:
                 return print(f'Failed to delete {file_path}. Reason: {e}')
         return print("Files removed successfully.")
