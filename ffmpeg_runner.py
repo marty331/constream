@@ -91,7 +91,7 @@ class FfmpegRunner:
         user_input_dict["audio_codec"] = "aac"
         user_input_dict["audio_bitrate"] = "196k"
         user_input_dict["sample_rate"] = "44100"
-        user_input_dict["encoding_speed"] = "fast"
+        user_input_dict["encoding_speed"] = "ultrafast"
         user_input_dict["speed"] = "7"
         user_input_dict["crf"] = "22"
         user_input_dict["frame_size"] = "1280x720"
