@@ -92,7 +92,7 @@ class FfmpegRunner:
         user_input_dict["audio_bitrate"] = "196k"
         user_input_dict["sample_rate"] = "44100"
         user_input_dict["encoding_speed"] = "fast"
-        user_input_dict["speed"] = "21"
+        user_input_dict["speed"] = "7"
         user_input_dict["crf"] = "22"
         user_input_dict["frame_size"] = "1280x720"
         user_input_dict["hls_time"] = "5"
