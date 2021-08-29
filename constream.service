@@ -1,13 +1,11 @@
 [Unit]
 Description=constream daemon
-Requires=constream.socket
 After=network.target
 
 [Service]
-User=marty331
-Group=videoplayer
 WorkingDirectory=/apps/constream
-ExecStart=/usr/bin/python3 apps/constream/ffmpeg_runner.py
+ExecStart=/usr/bin/python3 /apps/constream/ffmpeg_runner.py
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
