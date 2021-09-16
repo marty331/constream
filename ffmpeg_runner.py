@@ -25,6 +25,7 @@ class FfmpegRunner:
         self.region_name = config('REGION_NAME')
         self.endpoint_url = config('ENDPOINT_URL')
         self.current_video = None
+        self.space_id = config('SPACE_ID')
 
     def aws_client(self):
         session = boto3.session.Session()
@@ -36,7 +37,7 @@ class FfmpegRunner:
         return client
 
     def aws_bucket(self, client):
-        resp = client.list_objects(Bucket='martystestspace')
+        resp = client.list_objects(Bucket=self.space_id)
         print(f"resp {resp}")
         results = []
         for obj in resp['Contents']:
@@ -78,7 +79,7 @@ class FfmpegRunner:
     def aws_download_file(self, client, movie):
         current_dir = os.getcwd()
         movie_file = client.download_file(
-            'martystestspace',
+            self.space_id,
             movie,
             f'{current_dir}/{movie}')
         return movie_file
